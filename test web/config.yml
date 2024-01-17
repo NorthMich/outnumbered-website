@@ -1,0 +1,26 @@
+
+backend:
+  name: github
+  repo: username/repo-name # Replace with your GitHub repository
+  branch: main
+
+media_folder: "assets/images" # Folder where images will be stored
+public_folder: "/images"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "gallery"
+    label: "Gallery"
+    folder: "content/gallery"
+    create: true
+    fields:
+      - {label: "Image Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Description", name: "description", widget: "text"}
+  # Additional collections can be added as per the website's content structure
